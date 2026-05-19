@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Assignment</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            padding:0;
+            background-color:#f2f2f2;
+            text-align:center;
+        }
+
+        /* Navigation Menu */
+        nav{
+            background-color:#333;
+            padding:15px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:20px;
+            font-size:18px;
+        }
+
+        nav a:hover{
+            color:yellow;
+        }
+
+        /* Content Section */
+        .container{
+            margin-top:30px;
+        }
+
+        h1{
+            color:#333;
+        }
+
+        p{
+            color:#555;
+            font-size:18px;
+        }
+
+        img{
+    width:350px;
+    height:220px;
+    border-radius:10px;
+}
+
+        /* Form Styling */
+        form{
+            margin-top:30px;
+        }
+
+        input[type="text"]{
+            padding:10px;
+            width:250px;
+            border:1px solid gray;
+            border-radius:5px;
+        }
+
+        input[type="submit"]{
+            padding:10px 20px;
+            background-color:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        input[type="submit"]:hover{
+            background-color:darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Heading, Paragraph, Image -->
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            This is a simple webpage using HTML and CSS.
+        </p>
+
+        <img src="https://picsum.photos/300/200" alt="Sample Image">
+
+        <!-- Form -->
+        <h2>Contact Form</h2>
+
+        <form>
+            <input type="text" placeholder="Enter your name">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

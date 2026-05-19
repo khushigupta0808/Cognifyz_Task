@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery & Slideshow</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+padding:20px;
+text-align:center;
+}
+
+h1{
+margin:20px;
+color:#333;
+}
+
+/* Gallery */
+
+.gallery{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-bottom:50px;
+}
+
+.gallery img{
+width:180px;
+height:120px;
+border-radius:12px;
+cursor:pointer;
+object-fit:cover;
+transition:0.4s;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.gallery img:hover{
+transform:scale(1.1);
+}
+
+/* Click image enlarge effect */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.lightbox img{
+width:70%;
+max-width:700px;
+border-radius:15px;
+}
+
+.lightbox:target{
+display:flex;
+}
+
+
+/* Slideshow */
+
+.slider{
+width:80%;
+max-width:700px;
+height:350px;
+margin:auto;
+overflow:hidden;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+.slides{
+display:flex;
+width:400%;
+height:100%;
+animation:slide 12s infinite;
+}
+
+.slides img{
+width:25%;
+object-fit:cover;
+}
+
+@keyframes slide{
+
+0%{
+margin-left:0;
+}
+
+25%{
+margin-left:0;
+}
+
+30%{
+margin-left:-100%;
+}
+
+50%{
+margin-left:-100%;
+}
+
+55%{
+margin-left:-200%;
+}
+
+75%{
+margin-left:-200%;
+}
+
+80%{
+margin-left:-300%;
+}
+
+100%{
+margin-left:-300%;
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.slider{
+height:220px;
+width:95%;
+}
+
+.gallery img{
+width:140px;
+height:100px;
+}
+
+.lightbox img{
+width:90%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Image Gallery</h1>
+
+<div class="gallery">
+
+<a href="#img1">
+<img src="https://picsum.photos/id/1015/500/300">
+</a>
+
+<a href="#img2">
+<img src="https://picsum.photos/id/1016/500/300">
+</a>
+
+<a href="#img3">
+<img src="https://picsum.photos/id/1018/500/300">
+</a>
+
+<a href="#img4">
+<img src="https://picsum.photos/id/1025/500/300">
+</a>
+
+</div>
+
+
+<div id="img1" class="lightbox">
+<a href="#">
+<img src="https://picsum.photos/id/1015/800/500">
+</a>
+</div>
+
+<div id="img2" class="lightbox">
+<a href="#">
+<img src="https://picsum.photos/id/1016/800/500">
+</a>
+</div>
+
+<div id="img3" class="lightbox">
+<a href="#">
+<img src="https://picsum.photos/id/1018/800/500">
+</a>
+</div>
+
+<div id="img4" class="lightbox">
+<a href="#">
+<img src="https://picsum.photos/id/1025/800/500">
+</a>
+</div>
+
+
+<h1>Automatic Image Slideshow</h1>
+
+<div class="slider">
+
+<div class="slides">
+
+<img src="https://picsum.photos/id/1035/700/350">
+
+<img src="https://picsum.photos/id/1040/700/350">
+
+<img src="https://picsum.photos/id/1043/700/350">
+
+<img src="https://picsum.photos/id/1050/700/350">
+
+</div>
+
+</div>
+
+</body>
+</html>
